@@ -1,5 +1,6 @@
 "use client"
 
+import React from "react"
 import {
   ArrowRight,
   Award,
@@ -140,9 +141,9 @@ export default function ChairmanProfile() {
           {/* Heading */}
 
           <div className="max-w-3xl">
+
             <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-blue-700">
               <Landmark className="h-3.5 w-3.5" />
-
               Nagar Panchayat Leadership
             </div>
 
@@ -151,9 +152,10 @@ export default function ChairmanProfile() {
             </h1>
 
             <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base">
-              Learn about the leadership, priorities and vision
-              guiding Nagar Panchayat Anandnagar, Maharajganj.
+              Learn about the leadership, priorities and vision guiding
+              Nagar Panchayat Anandnagar, Maharajganj.
             </p>
+
           </div>
         </div>
       </section>
@@ -195,7 +197,9 @@ export default function ChairmanProfile() {
 
                 <div className="grid md:grid-cols-[0.9fr_1.1fr]">
 
-                  {/* Portrait */}
+                  {/* =================================================
+                      CHAIRMAN PORTRAIT
+                  ================================================= */}
 
                   <div className="relative flex min-h-[360px] items-center justify-center overflow-hidden bg-blue-950 p-8">
 
@@ -216,34 +220,46 @@ export default function ChairmanProfile() {
                       className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/10 blur-3xl"
                     />
 
-                    {/* Placeholder portrait */}
+                    {/* Chairman Image */}
 
                     <div className="relative">
 
-                      <div className="flex h-48 w-48 items-center justify-center rounded-full border-8 border-white/10 bg-white/10 shadow-2xl backdrop-blur-sm sm:h-56 sm:w-56">
+                      <div className="relative h-48 w-48 overflow-hidden rounded-full border-8 border-white/10 bg-white/10 shadow-2xl backdrop-blur-sm sm:h-56 sm:w-56">
 
-                        <Users className="h-24 w-24 text-blue-200 sm:h-28 sm:w-28" />
+                        <img
+                          src="/chairmanperson.png"
+                          alt="Chairman - Nagar Panchayat Anandnagar"
+                          className="h-full w-full object-cover object-center transition-transform duration-500 hover:scale-105"
+                        />
 
                       </div>
 
                       {/* Status */}
 
                       <div className="absolute bottom-2 right-2 flex items-center gap-1.5 rounded-full border border-white/10 bg-white px-3 py-1.5 text-[10px] font-bold text-emerald-700 shadow-lg">
+
                         <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+
                         Public Office
+
                       </div>
 
                     </div>
+
                   </div>
 
-                  {/* Profile Information */}
+                  {/* =================================================
+                      PROFILE INFORMATION
+                  ================================================== */}
 
                   <div className="flex flex-col justify-center p-7 sm:p-9">
 
                     <div className="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.12em] text-blue-600">
+
                       <ShieldCheck className="h-4 w-4" />
 
                       Elected Leadership
+
                     </div>
 
                     <h2 className="text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl">
@@ -256,9 +272,9 @@ export default function ChairmanProfile() {
 
                     <p className="mt-4 text-sm leading-6 text-slate-600">
                       The Chairman provides leadership for municipal
-                      administration and works towards improving
-                      civic services, infrastructure and citizen
-                      welfare in Anandnagar.
+                      administration and works towards improving civic
+                      services, infrastructure and citizen welfare in
+                      Anandnagar.
                     </p>
 
                     {/* Focus Areas */}
@@ -270,6 +286,7 @@ export default function ChairmanProfile() {
                       </h3>
 
                       <div className="space-y-3">
+
                         {focusAreas.map((area) => {
                           const Icon = area.icon
 
@@ -278,11 +295,13 @@ export default function ChairmanProfile() {
                               key={area.title}
                               className="flex items-start gap-3"
                             >
+
                               <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-700">
                                 <Icon className="h-4 w-4" />
                               </div>
 
                               <div>
+
                                 <p className="text-sm font-semibold text-slate-900">
                                   {area.title}
                                 </p>
@@ -290,15 +309,21 @@ export default function ChairmanProfile() {
                                 <p className="mt-0.5 text-xs leading-5 text-slate-500">
                                   {area.description}
                                 </p>
+
                               </div>
+
                             </div>
                           )
                         })}
+
                       </div>
 
                     </div>
+
                   </div>
+
                 </div>
+
               </section>
 
               {/* =================================================
@@ -314,6 +339,7 @@ export default function ChairmanProfile() {
                   </div>
 
                   <div>
+
                     <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-blue-600">
                       Leadership
                     </p>
@@ -321,6 +347,7 @@ export default function ChairmanProfile() {
                     <h3 className="text-xl font-bold tracking-tight text-slate-950">
                       Message from the Chairman
                     </h3>
+
                   </div>
 
                 </div>
@@ -329,23 +356,25 @@ export default function ChairmanProfile() {
 
                   <p className="text-sm leading-7 text-slate-600 sm:text-base">
                     &quot;Our priority is to work towards accessible,
-                    transparent and responsive civic services for
-                    every citizen of Anandnagar. Through better
-                    infrastructure, responsible administration and
-                    digital services, we aim to build a cleaner,
-                    more connected and citizen-focused Nagar
-                    Panchayat.&quot;
+                    transparent and responsive civic services for every
+                    citizen of Anandnagar. Through better infrastructure,
+                    responsible administration and digital services,
+                    we aim to build a cleaner, more connected and
+                    citizen-focused Nagar Panchayat.&quot;
                   </p>
 
                   <div className="mt-5 flex items-center gap-2">
+
                     <span className="h-px w-8 bg-slate-300" />
 
                     <p className="text-xs font-semibold text-slate-500">
                       Chairman, Nagar Panchayat Anandnagar
                     </p>
+
                   </div>
 
                 </div>
+
               </section>
 
               {/* =================================================
@@ -357,6 +386,7 @@ export default function ChairmanProfile() {
                 <div className="mb-5 flex items-end justify-between">
 
                   <div>
+
                     <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-blue-600">
                       Development Priorities
                     </p>
@@ -364,6 +394,7 @@ export default function ChairmanProfile() {
                     <h3 className="mt-1 text-2xl font-bold tracking-tight text-slate-950">
                       Vision for Anandnagar
                     </h3>
+
                   </div>
 
                   <Award className="hidden h-6 w-6 text-orange-500 sm:block" />
@@ -380,6 +411,7 @@ export default function ChairmanProfile() {
                         key={item.title}
                         className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md"
                       >
+
                         <div
                           className={`flex h-10 w-10 items-center justify-center rounded-xl ${item.iconClass}`}
                         >
@@ -393,11 +425,13 @@ export default function ChairmanProfile() {
                         <p className="mt-1.5 text-xs leading-5 text-slate-500">
                           {item.description}
                         </p>
+
                       </div>
                     )
                   })}
 
                 </div>
+
               </section>
 
               {/* =================================================
@@ -473,8 +507,11 @@ export default function ChairmanProfile() {
                     ))}
 
                   </div>
+
                 </div>
+
               </section>
+
             </div>
 
             {/* =================================================
@@ -498,6 +535,7 @@ export default function ChairmanProfile() {
                     </div>
 
                     <div>
+
                       <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-orange-600">
                         Leadership Note
                       </p>
@@ -505,21 +543,31 @@ export default function ChairmanProfile() {
                       <h4 className="text-base font-bold text-slate-950">
                         Chairman&apos;s Note
                       </h4>
+
                     </div>
 
                   </div>
 
                   <blockquote className="border-l-2 border-orange-400 pl-4 text-sm leading-6 text-slate-600">
-                    &quot;Together, we can build an Anandnagar
-                    that is cleaner, more accessible, digitally
-                    connected and responsive to the needs of
-                    every citizen.&quot;
+                    &quot;Together, we can build an Anandnagar that is
+                    cleaner, more accessible, digitally connected and
+                    responsive to the needs of every citizen.&quot;
                   </blockquote>
 
                   <div className="mt-5 flex items-center gap-2">
-                    <div className="h-7 w-7 rounded-full bg-blue-100" />
+
+                    <div className="h-7 w-7 overflow-hidden rounded-full bg-blue-100">
+
+                      <img
+                        src="/chairman.png"
+                        alt="Chairman"
+                        className="h-full w-full object-cover"
+                      />
+
+                    </div>
 
                     <div>
+
                       <p className="text-xs font-semibold text-slate-900">
                         Chairman
                       </p>
@@ -527,10 +575,13 @@ export default function ChairmanProfile() {
                       <p className="text-[10px] text-slate-500">
                         Nagar Panchayat Anandnagar
                       </p>
+
                     </div>
+
                   </div>
 
                 </div>
+
               </section>
 
               {/* Quick Information */}
@@ -538,6 +589,7 @@ export default function ChairmanProfile() {
               <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
 
                 <div className="mb-5">
+
                   <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-blue-600">
                     Leadership
                   </p>
@@ -545,6 +597,7 @@ export default function ChairmanProfile() {
                   <h4 className="mt-1 text-base font-bold text-slate-950">
                     Office Priorities
                   </h4>
+
                 </div>
 
                 <div className="space-y-3">
@@ -560,15 +613,18 @@ export default function ChairmanProfile() {
                       key={item}
                       className="flex items-start gap-2.5"
                     >
+
                       <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" />
 
                       <span className="text-xs leading-5 text-slate-600">
                         {item}
                       </span>
+
                     </div>
                   ))}
 
                 </div>
+
               </section>
 
               {/* Citizen CTA */}
@@ -600,9 +656,13 @@ export default function ChairmanProfile() {
               </section>
 
             </aside>
+
           </div>
+
         </div>
+
       </section>
+
     </main>
   )
 }
