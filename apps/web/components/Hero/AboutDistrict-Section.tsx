@@ -5,8 +5,8 @@ import {
 
 export const AboutAnandnagarSection: React.FC = () => {
   const stats = [
-    { icon: <Users className="w-5 h-5 text-blue-600" />, label: "Total Population", value: "10,113", desc: "Across 11 Wards" },
-    { icon: <TrendingUp className="w-5 h-5 text-emerald-600" />, label: "Administrative Wards", value: "11 Wards", desc: "Local urban bodies" },
+    { icon: <Users className="w-5 h-5 text-blue-600" />, label: "Total Population", value: "24k", desc: "Across 18 Wards" },
+    { icon: <TrendingUp className="w-5 h-5 text-emerald-600" />, label: "Administrative Wards", value: "18 Wards", desc: "Local urban bodies" },
     { icon: <Milestone className="w-5 h-5 text-purple-600" />, label: "Elevation Level", value: "88 meters", desc: "Above sea level" },
     { icon: <BookOpen className="w-5 h-5 text-amber-600" />, label: "Literacy Rate", value: "88.41%", desc: "Regional benchmark" },
   ];
@@ -120,7 +120,7 @@ export const AboutAnandnagarSection: React.FC = () => {
                   </div>
                   <h5 className="font-extrabold text-slate-900 text-sm uppercase tracking-wider mb-2">Civic Administration</h5>
                   <p className="text-slate-600 text-xs md:text-sm leading-relaxed font-medium">
-                    The Nagar Panchayat directly manages sanitary operations, municipal utilities, and strategic infrastructure programs distributed across its <strong className="text-slate-900 font-semibold">11 wards</strong>.
+                    The Nagar Panchayat directly manages sanitary operations, municipal utilities, and strategic infrastructure programs distributed across its <strong className="text-slate-900 font-semibold">18 wards</strong>.
                   </p>
                 </div>
               </div>

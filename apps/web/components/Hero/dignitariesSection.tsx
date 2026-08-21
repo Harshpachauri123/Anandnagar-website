@@ -22,24 +22,24 @@ export default function DignitariesSection() {
       id: "2",
       name: "Shri Arvind Kumar Sharma",
       designation: "Minister of Urban Development, UP",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGnVLNIphcD463NPf9HTUAQsytvLyQR9lcEfQnUqxUGw&s=10",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSccuweW9do7mqLcHMMcW3eRvoX65bVC3oWdKmQ-xqRjA&s=10",
     },
     {
       id: "3",
       name: "Shri Rakesh Rathore Guru",
       designation: "State Minister of Urban Development, UP",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSccuweW9do7mqLcHMMcW3eRvoX65bVC3oWdKmQ-xqRjA&s=10",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGnVLNIphcD463NPf9HTUAQsytvLyQR9lcEfQnUqxUGw&s=10",
     },
     {
       id: "4",
       name: "Smt. Vijay Lakshmi Jaiswal",
-      designation: "Chairman of Nagar Panchayat Anadnagar, UP",
+      designation: "Chairman Officer of Nagar Panchayat Anadnagar,Maharajganj, UP",
       image: "/chairmanperson.png",
     },
     {
       id: "5",
       name: "Shri Anuj Kumar Bharti ",
-      designation: "Executive of Nagar Panchayat Anandnagar, UP",
+      designation: "Executive Officer of Nagar Panchayat Anandnagar,Maharajganj, UP",
       image: "/executiveclerk.png",
     },
   ]

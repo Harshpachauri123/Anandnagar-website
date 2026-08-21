@@ -7,7 +7,7 @@ export default function NotFound() {
       <div className="max-w-md rounded-lg border border-slate-200 bg-white p-6 text-center shadow-soft">
         <p className="text-sm font-semibold uppercase tracking-wider text-primary">404</p>
         <h1 className="mt-2 text-2xl font-semibold text-slate-950">Page not found</h1>
-        <p className="mt-2 text-sm text-slate-500">That Nagar Palika Parishad page is not available.</p>
+        <p className="mt-2 text-sm text-slate-500">That Nagar Panchayat Anandnagar page is not available.</p>
         <Button  className="mt-5">
           <Link href="/">Back to Home</Link>
         </Button>

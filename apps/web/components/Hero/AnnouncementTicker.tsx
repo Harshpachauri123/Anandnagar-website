@@ -33,7 +33,7 @@ const notices: Notice[] = [
   {
     id: "tender",
     text: "टेंडर सूचना: स्मार्ट सोलर स्ट्रीट लाइट खरीद एवं वार्डवार स्थापना हेतु निविदाएं आमंत्रित हैं।",
-    link: "/news-notices",
+    link: "#news-notices",
   },
 ]
 
