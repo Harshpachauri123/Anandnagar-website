@@ -1,4 +1,3 @@
-
 "use client"
 
 import {
@@ -6,11 +5,8 @@ import {
   ChevronRight,
   Menu,
   Search,
-  UserPlus,
   X,
 } from "lucide-react"
-
-import { Show, UserButton } from "@clerk/nextjs"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
@@ -120,15 +116,12 @@ export default function NavigationHeader() {
 
   return (
     <header className="sticky top-0 z-50 w-full">
-
       {/* =====================================================
           MAIN HEADER
       ====================================================== */}
 
       <div className="border-b border-slate-200/80 bg-slate-300 backdrop-blur-xl">
-
         <div className="mx-auto flex min-h-[76px] w-full max-w-[1400px] items-center justify-between gap-5 px-4 sm:px-6 lg:px-10">
-
           {/* =================================================
               LOGO + BRAND
           ================================================== */}
@@ -138,11 +131,9 @@ export default function NavigationHeader() {
             onClick={closeMobileMenu}
             className="group flex min-w-0 items-center gap-3 rounded-2xl outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
           >
-
             {/* Logo */}
 
             <div className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-white p-1 shadow-sm transition-all duration-300 group-hover:-translate-y-0.5 group-hover:border-blue-200 group-hover:shadow-lg sm:h-14 sm:w-14">
-
               <img
                 src="/government.png"
                 alt="Adarsh Nagar Panchayat Anandnagar Logo"
@@ -154,29 +145,23 @@ export default function NavigationHeader() {
               <span className="absolute -right-0.5 -top-0.5 flex h-3 w-3 items-center justify-center rounded-full border-2 border-white bg-emerald-500">
                 <span className="h-1.5 w-1.5 rounded-full bg-white" />
               </span>
-
             </div>
 
             {/* Brand text */}
 
             <div className="min-w-0">
-
               <h1 className="truncate text-[15px] font-extrabold tracking-tight text-slate-900 transition-colors group-hover:text-blue-800 sm:text-lg lg:text-xl">
                 Adarsh Nagar Panchayat Anandnagar
               </h1>
 
               <div className="mt-0.5 flex items-center gap-1.5">
-
                 <span className="hidden h-1 w-1 rounded-full bg-orange-500 sm:block" />
 
                 <p className="truncate text-[8px] font-bold uppercase tracking-[0.14em] text-slate-500 sm:text-[10px]">
                   Maharajganj, Uttar Pradesh, India
                 </p>
-
               </div>
-
             </div>
-
           </Link>
 
           {/* =================================================
@@ -187,7 +172,6 @@ export default function NavigationHeader() {
             aria-label="Main navigation"
             className="hidden items-center rounded-2xl border border-slate-200 bg-slate-50/80 p-1 shadow-sm lg:flex"
           >
-
             {primaryLinks.map((link) => {
               const active = isActive(link.path)
 
@@ -211,17 +195,14 @@ export default function NavigationHeader() {
                     }
                   `}
                 >
-
                   {link.name}
 
                   {active && (
                     <span className="absolute bottom-0 left-1/2 h-[3px] w-5 -translate-x-1/2 translate-y-[1px] rounded-full bg-gradient-to-r from-orange-500 to-amber-400" />
                   )}
-
                 </Link>
               )
             })}
-
           </nav>
 
           {/* =================================================
@@ -229,7 +210,6 @@ export default function NavigationHeader() {
           ================================================== */}
 
           <div className="flex shrink-0 items-center gap-2">
-
             {/* Search */}
 
             <button
@@ -255,63 +235,6 @@ export default function NavigationHeader() {
               <Search className="h-4 w-4" />
             </button>
 
-            {/* =================================================
-                CLERK AUTH
-            ================================================== */}
-
-            <Show when="signed-out">
-
-              <Link
-                href="/sign-in"
-                className="
-                  hidden items-center gap-2
-                  rounded-xl
-                  bg-gradient-to-r from-blue-600 to-indigo-600
-                  px-4 py-2.5
-                  text-sm font-bold text-white
-                  shadow-md shadow-blue-500/20
-                  transition-all duration-200
-                  hover:-translate-y-0.5
-                  hover:from-blue-700
-                  hover:to-indigo-700
-                  hover:shadow-lg hover:shadow-blue-500/25
-                  active:translate-y-0
-                  focus:outline-none
-                  focus-visible:ring-2
-                  focus-visible:ring-blue-500
-                  focus-visible:ring-offset-2
-                  sm:inline-flex
-                "
-              >
-
-                <UserPlus className="h-4 w-4" />
-
-                <span>Sign In</span>
-
-              </Link>
-
-            </Show>
-
-            <Show when="signed-in">
-
-              <div className="flex items-center rounded-xl border border-slate-200 bg-white p-1 shadow-sm transition-all hover:border-blue-200 hover:shadow-md">
-
-                <UserButton
-                  appearance={{
-                    elements: {
-                      avatarBox: "h-9 w-9",
-                      userButtonPopoverCard:
-                        "rounded-2xl border border-slate-200 shadow-2xl",
-                      userButtonPopoverActionButton:
-                        "rounded-xl",
-                    },
-                  }}
-                />
-
-              </div>
-
-            </Show>
-
             {/* Mobile Menu */}
 
             <button
@@ -322,9 +245,7 @@ export default function NavigationHeader() {
                   : "Open navigation menu"
               }
               aria-expanded={mobileOpen}
-              onClick={() =>
-                setMobileOpen((value) => !value)
-              }
+              onClick={() => setMobileOpen((value) => !value)}
               className="
                 flex h-10 w-10 items-center justify-center
                 rounded-xl border border-slate-200
@@ -340,19 +261,14 @@ export default function NavigationHeader() {
                 lg:hidden
               "
             >
-
               {mobileOpen ? (
                 <X className="h-5 w-5" />
               ) : (
                 <Menu className="h-5 w-5" />
               )}
-
             </button>
-
           </div>
-
         </div>
-
       </div>
 
       {/* =====================================================
@@ -360,40 +276,28 @@ export default function NavigationHeader() {
       ====================================================== */}
 
       <div className="hidden border-b border-slate-200 bg-white/95 shadow-[0_4px_18px_rgba(15,23,42,0.06)] backdrop-blur-xl lg:block">
-
         <nav
           aria-label="Citizen services navigation"
           className="mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-10"
         >
-
           <div className="flex h-[56px] items-center justify-center">
-
-            {/* =================================================
-                CITIZEN SERVICES LABEL
-            ================================================== */}
+            {/* Citizen Services Label */}
 
             <div className="mr-5 flex shrink-0 items-center gap-2 border-r border-slate-200 pr-5">
-
               <span className="relative flex h-2.5 w-2.5">
-
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-50" />
 
                 <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
-
               </span>
 
               <span className="text-[10px] font-extrabold uppercase tracking-[0.15em] text-slate-400">
                 Citizen Services
               </span>
-
             </div>
 
-            {/* =================================================
-                SERVICE LINKS
-            ================================================== */}
+            {/* Service Links */}
 
             <div className="flex items-center gap-1">
-
               {serviceLinks.map((link) => {
                 const active = isActive(link.path)
 
@@ -420,10 +324,7 @@ export default function NavigationHeader() {
                       }
                     `}
                   >
-
-                    <span>
-                      {link.name}
-                    </span>
+                    <span>{link.name}</span>
 
                     <ChevronRight
                       className={`
@@ -440,17 +341,13 @@ export default function NavigationHeader() {
                     {active && (
                       <span className="absolute -bottom-[1px] left-1/2 h-[3px] w-6 -translate-x-1/2 rounded-full bg-orange-400" />
                     )}
-
                   </Link>
                 )
               })}
 
-              {/* =================================================
-                  STAFF DROPDOWN
-              ================================================== */}
+              {/* Staff Dropdown */}
 
               <div className="group relative">
-
                 <button
                   type="button"
                   aria-haspopup="menu"
@@ -470,10 +367,7 @@ export default function NavigationHeader() {
                     }
                   `}
                 >
-
-                  <span>
-                    Staff
-                  </span>
+                  <span>Staff</span>
 
                   <ChevronDown
                     className="
@@ -482,21 +376,16 @@ export default function NavigationHeader() {
                       group-hover:rotate-180
                     "
                   />
-
                 </button>
 
                 {/* Dropdown */}
 
                 <div className="invisible absolute right-0 top-full z-50 w-56 translate-y-2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-
                   <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-2xl shadow-slate-900/10">
-
                     <div className="mb-1 px-3 py-2">
-
                       <p className="text-[10px] font-extrabold uppercase tracking-[0.15em] text-slate-400">
                         Administration
                       </p>
-
                     </div>
 
                     {staffLinks.map((link) => {
@@ -518,15 +407,12 @@ export default function NavigationHeader() {
                             }
                           `}
                         >
-
-                          <span>
-                            {link.name}
-                          </span>
+                          <span>{link.name}</span>
 
                           <ChevronRight
                             className={`
                               h-4 w-4
-                              transition-transform duration-200
+                              transition-transform
                               ${
                                 active
                                   ? "text-blue-600"
@@ -534,23 +420,15 @@ export default function NavigationHeader() {
                               }
                             `}
                           />
-
                         </Link>
                       )
                     })}
-
                   </div>
-
                 </div>
-
               </div>
-
             </div>
-
           </div>
-
         </nav>
-
       </div>
 
       {/* =====================================================
@@ -558,15 +436,11 @@ export default function NavigationHeader() {
       ====================================================== */}
 
       {mobileOpen && (
-
         <div className="border-b border-slate-200 bg-white shadow-2xl lg:hidden">
-
           <div className="mx-auto max-w-7xl px-4 py-5 sm:px-6">
-
             {/* Mobile Search */}
 
             <div className="mb-5 flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-3 py-3 transition-all focus-within:border-blue-300 focus-within:bg-white focus-within:ring-4 focus-within:ring-blue-50">
-
               <Search className="h-4 w-4 shrink-0 text-slate-400" />
 
               <input
@@ -575,27 +449,20 @@ export default function NavigationHeader() {
                 aria-label="Search services"
                 className="w-full bg-transparent text-sm text-slate-900 outline-none placeholder:text-slate-400"
               />
-
             </div>
 
-            {/* =================================================
-                MAIN NAVIGATION
-            ================================================== */}
+            {/* Main Navigation */}
 
             <div>
-
               <div className="mb-2 flex items-center gap-2 px-2">
-
                 <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
 
                 <p className="text-[10px] font-extrabold uppercase tracking-[0.15em] text-slate-400">
                   Main Navigation
                 </p>
-
               </div>
 
               <div className="grid gap-1 sm:grid-cols-2">
-
                 {primaryLinks.map((link) => {
                   const active = isActive(link.path)
 
@@ -616,47 +483,33 @@ export default function NavigationHeader() {
                         }
                       `}
                     >
-
-                      <span>
-                        {link.name}
-                      </span>
+                      <span>{link.name}</span>
 
                       {active && (
                         <span className="h-2 w-2 rounded-full bg-orange-500" />
                       )}
-
                     </Link>
                   )
                 })}
-
               </div>
-
             </div>
 
             {/* Divider */}
 
             <div className="my-5 h-px bg-slate-100" />
 
-            {/* =================================================
-                CITIZEN SERVICES
-            ================================================== */}
+            {/* Citizen Services */}
 
             <div>
-
               <div className="mb-2 flex items-center gap-2 px-2">
-
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
 
                 <p className="text-[10px] font-extrabold uppercase tracking-[0.15em] text-slate-400">
                   Citizen Services
                 </p>
-
               </div>
 
               <div className="grid gap-1 sm:grid-cols-2">
-
-                {/* Normal service links */}
-
                 {serviceLinks.map((link) => {
                   const active = isActive(link.path)
 
@@ -677,10 +530,7 @@ export default function NavigationHeader() {
                         }
                       `}
                     >
-
-                      <span>
-                        {link.name}
-                      </span>
+                      <span>{link.name}</span>
 
                       <ChevronRight
                         className={`
@@ -692,22 +542,16 @@ export default function NavigationHeader() {
                           }
                         `}
                       />
-
                     </Link>
                   )
                 })}
 
-                {/* =================================================
-                    MOBILE STAFF DROPDOWN
-                ================================================== */}
+                {/* Mobile Staff Dropdown */}
 
                 <div className="sm:col-span-2">
-
                   <button
                     type="button"
-                    onClick={() =>
-                      setStaffOpen((value) => !value)
-                    }
+                    onClick={() => setStaffOpen((value) => !value)}
                     aria-expanded={staffOpen}
                     className={`
                       flex w-full items-center justify-between
@@ -721,10 +565,7 @@ export default function NavigationHeader() {
                       }
                     `}
                   >
-
-                    <span>
-                      Staff
-                    </span>
+                    <span>Staff</span>
 
                     <ChevronDown
                       className={`
@@ -737,15 +578,12 @@ export default function NavigationHeader() {
                         }
                       `}
                     />
-
                   </button>
 
                   {/* Staff submenu */}
 
                   {staffOpen && (
-
                     <div className="mt-1 ml-3 space-y-1 border-l-2 border-blue-100 pl-3">
-
                       {staffLinks.map((link) => {
                         const active = isActive(link.path)
 
@@ -766,87 +604,20 @@ export default function NavigationHeader() {
                               }
                             `}
                           >
+                            <span>{link.name}</span>
 
-                            <span>
-                              {link.name}
-                            </span>
-
-                            <ChevronRight
-                              className="h-4 w-4"
-                            />
-
+                            <ChevronRight className="h-4 w-4" />
                           </Link>
                         )
                       })}
-
                     </div>
-
                   )}
-
                 </div>
-
               </div>
-
             </div>
-
-            {/* =================================================
-                MOBILE AUTH
-            ================================================== */}
-
-            <div className="mt-5 border-t border-slate-100 pt-5">
-
-              <Show when="signed-out">
-
-                <Link
-                  href="/sign-in"
-                  onClick={closeMobileMenu}
-                  className="
-                    flex w-full items-center
-                    justify-center gap-2
-                    rounded-xl
-                    bg-gradient-to-r
-                    from-blue-600 to-indigo-600
-                    px-4 py-3
-                    text-sm font-bold text-white
-                    shadow-lg shadow-blue-500/20
-                    transition-all
-                    hover:from-blue-700
-                    hover:to-indigo-700
-                  "
-                >
-
-                  <UserPlus className="h-4 w-4" />
-
-                  Sign In
-
-                </Link>
-
-              </Show>
-
-              <Show when="signed-in">
-
-                <div className="flex items-center justify-center rounded-xl border border-slate-200 bg-slate-50 p-3">
-
-                  <UserButton
-                    appearance={{
-                      elements: {
-                        avatarBox: "h-10 w-10",
-                      },
-                    }}
-                  />
-
-                </div>
-
-              </Show>
-
-            </div>
-
           </div>
-
         </div>
-
       )}
-
     </header>
   )
 }

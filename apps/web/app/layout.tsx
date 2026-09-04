@@ -1,5 +1,5 @@
 
-import { ClerkProvider } from '@clerk/nextjs'
+
 import QueryProvider from '@/components/providers/query-providers'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'NAGAR PANCHAYAT, AANANDNAGAR',
+  title: 'NAGAR PANCHAYAT, ANANDNAGAR',
   description:
     'Official website of Nagar Panchayat, Aanandnagar - Empowering citizens through digital transparency and efficient municipal services',
 }
@@ -23,7 +23,6 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <ClerkProvider>
       <html
         lang="en"
         suppressHydrationWarning
@@ -34,6 +33,5 @@ export default function RootLayout({
           <QueryProvider>{children}</QueryProvider>
         </body>
       </html>
-    </ClerkProvider>
   )
 }
