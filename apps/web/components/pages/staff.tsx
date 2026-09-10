@@ -16,7 +16,6 @@ interface StaffMember {
   id: number
   name: string
   designation: string
-  phone: string
 }
 
 /* =========================================================
@@ -29,55 +28,46 @@ const staffMembers: StaffMember[] = [
     id: 1,
     name: "अनुज कुमार भारती",
     designation: "अधिशासी अधिकारी",
-    phone: "9990320487",
   },
   {
     id: 2,
     name: "विजय प्रताप यादव",
     designation: "अवर अभियंता (सिविल)",
-    phone: "9650130047",
   },
   {
     id: 3,
     name: "श्री वेद प्रकाश गुप्त",
     designation: "लिपिक",
-    phone: "9838498731",
   },
   {
     id: 4,
     name: "श्री वीरेन्द्र कुमार श्रीवास्तव",
     designation: "टंकक लिपिक",
-    phone: "9451679469",
   },
   {
     id: 5,
     name: "श्री सुनीर कुमार",
     designation: "जन्म/मृत्यु",
-    phone: "9621267779",
   },
   {
     id: 6,
     name: "श्री विजय कुमार",
     designation: "संग्रहकर्ता",
-    phone: "7318202860",
   },
   {
     id: 7,
     name: "श्री राममूर्ति यादव",
     designation: "लाइनमैन",
-    phone: "9792089834",
   },
   {
     id: 8,
     name: "श्री गज यादव",
     designation: "वरिष्ठ कम्प्यूटर ऑपरेटर",
-    phone: "9621288080",
   },
   {
     id: 9,
     name: "श्री बृजेश कुमार यादव",
     designation: "कम्प्यूटर ऑपरेटर",
-    phone: "9219485987",
   },
 ]
 
@@ -98,8 +88,7 @@ export default function Staff() {
     return staffMembers.filter(
       (member) =>
         member.name.toLowerCase().includes(value) ||
-        member.designation.toLowerCase().includes(value) ||
-        member.phone.includes(value),
+        member.designation.toLowerCase().includes(value),
     )
   }, [search])
 
@@ -212,7 +201,7 @@ export default function Staff() {
           <StatCard
             icon={<Users className="h-5 w-5" />}
             label="Total Employees"
-            value="10"
+            value="9"
             iconClass="bg-blue-50 text-blue-600"
           />
 
@@ -233,7 +222,7 @@ export default function Staff() {
           <StatCard
             icon={<CheckCircle2 className="h-5 w-5" />}
             label="Listed Contacts"
-            value="10"
+            value="9"
             iconClass="bg-emerald-50 text-emerald-600"
           />
 
@@ -478,47 +467,8 @@ function StaffCard({
 
           <div className="flex min-w-0 items-center gap-3">
 
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 ring-1 ring-emerald-100">
-
-              <Phone className="h-4 w-4" />
-
-            </div>
-
-            <div className="min-w-0">
-
-              <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
-                Contact Number
-              </p>
-
-              <p className="mt-0.5 truncate text-sm font-bold text-slate-800">
-                {member.phone}
-              </p>
-
-            </div>
 
           </div>
-
-          {/* Call Button */}
-
-          <a
-            href={`tel:${member.phone}`}
-            aria-label={`Call ${member.name}`}
-            className="
-              flex h-10 w-10 shrink-0
-              items-center justify-center
-              rounded-xl
-              bg-emerald-500
-              text-white
-              shadow-md shadow-emerald-500/20
-              transition-all duration-200
-              hover:scale-105
-              hover:bg-emerald-600
-              hover:shadow-lg
-              active:scale-95
-            "
-          >
-            <Phone className="h-4 w-4" />
-          </a>
 
         </div>
 

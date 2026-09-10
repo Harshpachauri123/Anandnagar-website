@@ -17,33 +17,33 @@ import {
 
 const staffMembers = [
   {
-    name: "Smt. Vijay Lakshmi Jaiswal",
-    designation: "Chairman Officer",
+    name: "श्रीमती विजय लक्ष्मी जायसवाल",
+    designation: "अध्यक्ष",
     image: "/chairmanperson.png",
     description:
-      "Responsible for overall administration, municipal services, development activities and effective implementation of civic programmes.",
+      "समग्र प्रशासन, नगर पालिका सेवाओं, विकास गतिविधियों और नागरिक कार्यक्रमों के प्रभावी क्रियान्वयन के लिए जिम्मेदार।",
   },
   {
-    name: "Shree Anuj Kumar Bharti",
-    designation: "Executive Officer",
+    name: "श्री अनुज कुमार भारती",
+    designation: "अधिशासी अधिकारी",
     image: "/executiveclerk.png",
     description:
-      "Supports administrative operations, official records, citizen services and coordination of municipal office activities.",
+      "प्रशासनिक संचालन, आधिकारिक रिकॉर्ड, नागरिक सेवाओं और नगर पालिका कार्यालय की गतिविधियों के समन्वय का संचालन।",
   },
   {
-    name: "Head Clerk",
-    designation: "Head Clerk",
+    name: "प्रधान लिपिक",
+    designation: "प्रधान लिपिक (Head Clerk)",
     image: "#executive.png",
     description:
-      "Supports administrative operations, official records, citizen services and coordination of municipal office activities.",
+      "प्रशासनिक कार्यों, आधिकारिक अभिलेखों, नागरिक सेवाओं और कार्यालयीन गतिविधियों में सहायता प्रदान करना।",
   },
 ]
 
 const highlights = [
-  "Citizen-centric municipal services",
-  "Transparent and accountable governance",
-  "Digital access to important civic services",
-  "Clean, sustainable and well-planned urban development",
+  "नागरिक-केंद्रित नगर पालिका सेवाएं",
+  "पारदर्शी और जवाबदेह शासन",
+  "महत्वपूर्ण नागरिक सेवाओं तक डिजिटल पहुंच",
+  "स्वच्छ, टिकाऊ और सुव्यवस्थित शहरी विकास",
 ]
 
 export default function AboutUs() {
@@ -64,21 +64,16 @@ export default function AboutUs() {
 
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-blue-700">
               <ShieldCheck className="h-4 w-4" />
-              Official Municipal Portal
+              आधिकारिक नगर पालिका पोर्टल
             </div>
 
-            <h1 className="text-4xl font-black tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
-              About Nagar Panchayat
-              <span className="block text-blue-700">
-                Anandnagar
-              </span>
+            <h1 className="text-4xl font-black tracking-tight text-blue-750 sm:text-5xl lg:text-6xl">
+              नगर पंचायत आनंदनगर 
             </h1>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-slate-600 sm:text-lg">
-              Nagar Panchayat Anandnagar, Maharajganj, Uttar Pradesh is
-              committed to providing transparent, accessible and citizen-focused
-              municipal services while supporting sustainable development and
-              better urban living.
+              नगर पंचायत आनंदनगर, महराजगंज, उत्तर प्रदेश पारदर्शी, सुलभ और नागरिक-केंद्रित
+              नगर पालिका सेवाएं प्रदान करने के साथ-साथ सतत विकास और बेहतर शहरी जीवन के लिए प्रतिबद्ध है।
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -86,7 +81,7 @@ export default function AboutUs() {
                 href="#about"
                 className="group inline-flex items-center gap-2 rounded-xl bg-blue-700 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-blue-700/20 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-800 hover:shadow-xl"
               >
-                Know About Us
+                हमारे बारे में जानें
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
 
@@ -95,7 +90,7 @@ export default function AboutUs() {
                 className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-bold text-slate-800 transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700"
               >
                 <Users className="h-4 w-4" />
-                Meet Our Staff
+                हमारे अधिकारियों से मिलें
               </a>
             </div>
           </div>
@@ -118,35 +113,28 @@ export default function AboutUs() {
 
               <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-orange-50 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-orange-700">
                 <Landmark className="h-4 w-4" />
-                About Anandnagar
+                आनंदनगर का परिचय
               </div>
 
               <h2 className="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-                Serving citizens with
+                पारदर्शिता और समर्पण के साथ
                 <span className="text-blue-700">
-                  {" "}transparency & dedication
+                  {" "}नागरिकों की सेवा
                 </span>
               </h2>
 
               <div className="mt-6 space-y-5 text-sm leading-7 text-slate-600 sm:text-base">
 
                 <p>
-                  Nagar Panchayat Anandnagar works towards delivering essential
-                  civic services and creating a responsive municipal
-                  administration for residents of Anandnagar.
+                  नगर पंचायत आनंदनगर आवश्यक नागरिक सेवाएं प्रदान करने और आनंदनगर के निवासियों के लिए एक उत्तरदायी नगर पालिका प्रशासन बनाने की दिशा में कार्य करता है।
                 </p>
 
                 <p>
-                  The Nagar Panchayat focuses on improving public infrastructure,
-                  sanitation, cleanliness, water-related services, civic
-                  amenities and citizen service delivery through efficient
-                  administration.
+                  नगर पंचायत कुशल प्रशासन के माध्यम से सार्वजनिक बुनियादी ढांचे, स्वच्छता, जल आपूर्ति, नागरिक सुविधाओं और नागरिक सेवा वितरण में सुधार पर ध्यान केंद्रित करती है।
                 </p>
 
                 <p>
-                  Through digital governance initiatives, citizens can access
-                  important municipal information and services more conveniently
-                  while promoting transparency and accountability.
+                  डिजिटल गवर्नेंस पहलों के माध्यम से, नागरिक पारदर्शिता और जवाबदेही को बढ़ावा देते हुए अधिक सुविधा के साथ महत्वपूर्ण नगर पालिका जानकारी और सेवाओं तक पहुँच प्राप्त कर सकते हैं।
                 </p>
 
               </div>
@@ -182,11 +170,11 @@ export default function AboutUs() {
                   </div>
 
                   <h3 className="mt-6 text-2xl font-black">
-                    Nagar Panchayat Anandnagar
+                    नगर पंचायत आनंदनगर
                   </h3>
 
                   <p className="mt-2 text-sm leading-6 text-blue-100">
-                    Maharajganj, Uttar Pradesh
+                    महराजगंज, उत्तर प्रदेश
                   </p>
 
                 </div>
@@ -195,20 +183,20 @@ export default function AboutUs() {
 
                   <InfoRow
                     icon={<MapPin className="h-5 w-5" />}
-                    title="Location"
-                    value="Anandnagar, Maharajganj, Uttar Pradesh"
+                    title="स्थान"
+                    value="आनंदनगर, महराजगंज, उत्तर प्रदेश"
                   />
 
                   <InfoRow
                     icon={<ShieldCheck className="h-5 w-5" />}
-                    title="Governance"
-                    value="Citizen-focused local administration"
+                    title="शासन"
+                    value="नागरिक-केंद्रित स्थानीय प्रशासन"
                   />
 
                   <InfoRow
                     icon={<Users className="h-5 w-5" />}
-                    title="Public Service"
-                    value="Accessible civic services for residents"
+                    title="जन सेवा"
+                    value="निवासियों के लिए सुलभ नागरिक सेवाएं"
                   />
 
                 </div>
@@ -229,16 +217,15 @@ export default function AboutUs() {
           <div className="mx-auto mb-12 max-w-2xl text-center">
 
             <span className="inline-flex items-center rounded-full bg-slate-100 px-4 py-2 text-xs font-bold uppercase tracking-[0.15em] text-slate-600">
-              Our Direction
+              हमारी दिशा
             </span>
 
             <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-              Mission & Vision
+              लक्ष्य एवं दृष्टि (Mission & Vision)
             </h2>
 
             <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base">
-              Building a cleaner, more transparent, inclusive and digitally
-              accessible Anandnagar for every citizen.
+              प्रत्येक नागरिक के लिए एक स्वच्छ, अधिक पारदर्शी, समावेशी और डिजिटल रूप से सशक्त आनंदनगर का निर्माण।
             </p>
 
           </div>
@@ -260,35 +247,32 @@ export default function AboutUs() {
 
                   <div>
                     <p className="text-xs font-bold uppercase tracking-widest text-blue-600">
-                      Mission
+                      मिशन
                     </p>
 
                     <h3 className="mt-1 text-2xl font-black text-slate-950">
-                      Our Mission
+                      हमारा लक्ष्य (Mission)
                     </h3>
                   </div>
 
                 </div>
 
                 <p className="mt-7 text-sm leading-8 text-slate-600 sm:text-base">
-                  To provide efficient, transparent and citizen-centric
-                  municipal services while continuously improving civic
-                  infrastructure, sanitation, public amenities and digital
-                  access for the people of Anandnagar.
+                  आनंदनगर के लोगों के लिए नागरिक बुनियादी ढांचे, स्वच्छता, सार्वजनिक सुविधाओं और डिजिटल पहुंच में लगातार सुधार करते हुए कुशल, पारदर्शी और नागरिक-केंद्रित नगर पालिका सेवाएं प्रदान करना।
                 </p>
 
                 <div className="mt-7 flex flex-wrap gap-2">
 
                   <span className="rounded-full bg-blue-100 px-3 py-1.5 text-xs font-bold text-blue-700">
-                    Transparency
+                    पारदर्शिता
                   </span>
 
                   <span className="rounded-full bg-emerald-100 px-3 py-1.5 text-xs font-bold text-emerald-700">
-                    Citizen First
+                    नागरिक सर्वोपरि
                   </span>
 
                   <span className="rounded-full bg-orange-100 px-3 py-1.5 text-xs font-bold text-orange-700">
-                    Better Services
+                    बेहतर सेवाएं
                   </span>
 
                 </div>
@@ -311,35 +295,32 @@ export default function AboutUs() {
 
                   <div>
                     <p className="text-xs font-bold uppercase tracking-widest text-emerald-600">
-                      Vision
+                      विज़न
                     </p>
 
                     <h3 className="mt-1 text-2xl font-black text-slate-950">
-                      Our Vision
+                      हमारी दृष्टि (Vision)
                     </h3>
                   </div>
 
                 </div>
 
                 <p className="mt-7 text-sm leading-8 text-slate-600 sm:text-base">
-                  To develop Anandnagar as a clean, sustainable, inclusive and
-                  digitally empowered Nagar Panchayat where modern civic
-                  infrastructure and responsive governance contribute to a
-                  better quality of life for every resident.
+                  आनंदनगर को एक स्वच्छ, टिकाऊ, समावेशी और डिजिटल रूप से सशक्त नगर पंचायत के रूप में विकसित करना, जहां आधुनिक नागरिक बुनियादी ढांचा और उत्तरदायी शासन हर निवासी के जीवन स्तर को बेहतर बनाने में योगदान दे।
                 </p>
 
                 <div className="mt-7 flex flex-wrap gap-2">
 
                   <span className="rounded-full bg-emerald-100 px-3 py-1.5 text-xs font-bold text-emerald-700">
-                    Clean Anandnagar
+                    स्वच्छ आनंदनगर
                   </span>
 
                   <span className="rounded-full bg-teal-100 px-3 py-1.5 text-xs font-bold text-teal-700">
-                    Digital Governance
+                    डिजिटल गवर्नेंस
                   </span>
 
                   <span className="rounded-full bg-blue-100 px-3 py-1.5 text-xs font-bold text-blue-700">
-                    Sustainable Growth
+                    सतत विकास
                   </span>
 
                 </div>
@@ -370,27 +351,26 @@ export default function AboutUs() {
 
               <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-blue-700">
                 <Users className="h-4 w-4" />
-                Municipal Administration
+                नगर पालिका प्रशासन
               </div>
 
               <h2 className="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
-                Our Staff
+                Our Official Staff Members
               </h2>
 
               <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base">
-                Meet the administrative team working towards efficient
-                municipal services and better citizen support in Anandnagar.
+                आनंदनगर में कुशल नगर पालिका सेवाओं और बेहतर नागरिक सहायता के लिए समर्पित हमारी प्रशासनिक टीम से मिलें।
               </p>
 
             </div>
 
             <div className="hidden rounded-2xl border border-slate-200 bg-white px-5 py-3 shadow-sm md:block">
               <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                Administration
+                प्रशासन
               </p>
 
               <p className="mt-1 font-black text-slate-900">
-                Nagar Panchayat Anandnagar
+                नगर पंचायत आनंदनगर
               </p>
             </div>
 
@@ -406,12 +386,9 @@ export default function AboutUs() {
                 className="group overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-200 hover:shadow-2xl hover:shadow-blue-100"
               >
 
-                {/* =================================================
-                    STAFF IMAGE
-                ================================================== */}
+                {/* STAFF IMAGE */}
                 <div className="relative flex h-72 w-full items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-slate-100 to-orange-50">
 
-                  {/* Decorative background */}
                   <div className="pointer-events-none absolute left-1/2 top-1/2 h-52 w-52 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/70 blur-xl" />
 
                   <img
@@ -423,7 +400,6 @@ export default function AboutUs() {
                     }}
                   />
 
-                  {/* Hover overlay */}
                   <div className="pointer-events-none absolute inset-0 z-20 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
                 </div>
@@ -445,7 +421,7 @@ export default function AboutUs() {
 
                   <div className="mt-5 flex items-center gap-2 border-t border-slate-100 pt-4 text-xs font-bold text-slate-500">
                     <ShieldCheck className="h-4 w-4 text-emerald-600" />
-                    Municipal Administration
+                    नगर पालिका प्रशासन
                   </div>
 
                 </div>
@@ -475,16 +451,15 @@ export default function AboutUs() {
               <div>
 
                 <span className="text-xs font-bold uppercase tracking-[0.18em] text-blue-200">
-                  Citizen Support
+                  नागरिक सहायता
                 </span>
 
                 <h2 className="mt-3 text-2xl font-black sm:text-3xl">
-                  Need assistance from Nagar Panchayat?
+                  नगर पंचायत से सहायता चाहिए?
                 </h2>
 
                 <p className="mt-3 max-w-2xl text-sm leading-7 text-blue-100">
-                  For municipal services, civic information or assistance,
-                  citizens can contact the Nagar Panchayat office.
+                  नगर पालिका सेवाओं, नागरिक सूचना या सहायता के लिए नागरिक नगर पंचायत कार्यालय से संपर्क कर सकते हैं।
                 </p>
 
               </div>
@@ -496,7 +471,7 @@ export default function AboutUs() {
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-black text-blue-800 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-50"
                 >
                   <Mail className="h-4 w-4" />
-                  Contact Office
+                  कार्यालय से संपर्क करें
                 </a>
 
                 <a
@@ -504,7 +479,7 @@ export default function AboutUs() {
                   className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/10 px-5 py-3 text-sm font-bold text-white backdrop-blur transition-all duration-300 hover:bg-white/20"
                 >
                   <Phone className="h-4 w-4" />
-                  Call Office
+                  कार्यालय में कॉल करें
                 </a>
 
               </div>
